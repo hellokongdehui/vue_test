@@ -1,21 +1,27 @@
 <template>
-  <div>
-    <h1>{{msg}}</h1>
-    <h2>学生姓名：{{name}}</h2>
-    <h2>学生性别：{{sex}}</h2>
-    <h2>学生年龄：{{age}}</h2>
+  <div class="demo">
+    <h2 class="title">学生姓名：{{ name }}</h2>
+    <h2 class="sex">学生性别：{{ sex }}</h2>
   </div>
 </template>
 
 <script>
   export default {
-    name:"Student",
+    name: "Student",
     data() {
       return {
-        name:"小硅谷",
-        sex:"男",
-        age:20
-      }
+        name: "小花",
+        sex: "女",
+      };
     },
-  }
+  };
 </script>
+
+<style lang="less">
+  .demo {
+    background-color: hotpink;
+    .sex {
+      color: white;
+    }
+  }
+</style>

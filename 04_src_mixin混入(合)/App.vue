@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="title">您好</h1>
     <Student/>
     <hr>
     <School/>
@@ -8,7 +7,7 @@
 </template>
 
 <script>
-  // 引入组件
+  // 引入school组件
   import Student from "./components/stundent.vue"
   import School from "./components/school.vue"
   export default {
@@ -17,11 +16,10 @@
       Student,
       School
     },
+    data() {
+      return {
+        
+      }
+    },
   }
 </script>
-
-<style scoped>
-  .title {
-    color:red
-  }
-</style>
