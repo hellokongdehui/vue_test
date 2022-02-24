@@ -1,19 +1,22 @@
 <template>
   <div>
-    <img src="./assets/logo.png" alt="logo">
-    <CorporateNa></CorporateNa>
-    <EmployeeNa></EmployeeNa>
+    <Student/>
   </div>
 </template>
+
 <script>
-  import CorporateNa from "./components/Corporate.vue"
-  import EmployeeNa from "./components/Employee.vue"
+  // 引入school组件
+  import School from "./components/stundent.vue"
   export default {
     name:"App",
     components:{
-      CorporateNa,
-      EmployeeNa
-    }
+      School
+    },
+    data() {
+      return {
+        msg:"欢迎学习Vue"
+      }
+    },
   }
 </script>
 
