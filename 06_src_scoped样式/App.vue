@@ -3,7 +3,7 @@
     <h1 class="title">您好</h1>
     <Student/>
     <hr>
-    <School/>
+    <School />
   </div>
 </template>
 
