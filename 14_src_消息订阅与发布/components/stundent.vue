@@ -1,12 +1,13 @@
 <template>
   <div class="student">
-    <h2>学生姓名：{{ name }}</h2>
-    <h2>学生性别：{{ sex }}</h2>
-    <button @click="sendStudentName">把学生名给App</button>
+    <h2>学生姓名：{{name}}</h2>
+    <h2>学生性别：{{sex}}</h2>
+    <button @click="sendStudentName">把学生名给School组件</button>
   </div>
 </template>
 
 <script>
+  import pubsub from "pubsub-js"
   export default {
     name: "Student",
     data() {
@@ -15,10 +16,13 @@
         sex: "女",
       };
     },
+    mounted(){
+      // console.log("student",this.x)
+    },
     methods: {
       sendStudentName(){
-        // 触发Student组件实例身上的getStuNa事件
-        this.$emit("getStuNa",this.name,666,888,999)
+        // this.$bus.$emit("hello",this.name)
+        pubsub.publish("hello",666)
       }
     },
   };
@@ -28,5 +32,6 @@
   .student {
     background-color: hotpink;
     padding: 5px;
+    margin-top: 10px;
   }
 </style>
