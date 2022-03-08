@@ -14,7 +14,7 @@ import Detail from '../pages/Detail'
       name:'guanyu',
       path:'/about',
       component:About,
-      meta:{isAuth:true,title:'关于'}
+      meta:{title:'关于'}
     },
     {
       name:'zhuye',
@@ -27,8 +27,8 @@ import Detail from '../pages/Detail'
           path:'news',
           component:News,
           meta:{isAuth:true,title:'新闻'},
-          /* beforeEnter:(to,from,next)=>{
-            console.log(to,from)
+          beforeEnter:(to,from,next)=>{
+            console.log("独享路由守卫",to,from)
             if (to.meta.isAuth) {  // 判断是否需要鉴权
               if (localStorage.getItem('School') === 'HITSZ') {
                 next()
@@ -38,7 +38,7 @@ import Detail from '../pages/Detail'
             }else{
               next()
             }
-          } */
+          }
         },
         {
           name:'xiaoxi',

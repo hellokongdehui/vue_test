@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="row">
-      <Banner/>
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="page-header"><h2>Vue Router Demo</h2></div>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
@@ -11,8 +13,8 @@
           <!-- <a class="list-group-item" href="./home.html">Home</a> -->
 
           <!-- 使用Vue中router-link标签实现路由的切换 -->
-          <router-link :replace='true' class="list-group-item" active-class="active" :to="{name:'guanyu'}">About</router-link>
-          <router-link replace class="list-group-item" active-class="active" to="/home">Home</router-link>
+          <router-link class="list-group-item" active-class="active" to="/about">About</router-link>
+          <router-link class="list-group-item" active-class="active" to="/home">Home</router-link>
         </div>
       </div>
       <div class="col-xs-6">
@@ -28,9 +30,8 @@
 </template>
 
 <script>
-  import Banner from './components/Banner'
   export default {
     name:"App",
-    components:{Banner}
+    components:{}
   }
 </script>
